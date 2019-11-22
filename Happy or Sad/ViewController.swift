@@ -55,9 +55,9 @@ class ViewController: UIViewController {
         
         var sadAmount = 0
         
-        let happyFaces = "😀🙂😄😊"
+        let happyFaces = "😀🙂😄😊:)"
         
-        let sadFaces = "☹️🙁😕😔"
+        let sadFaces = "☹️🙁😕😔:("
         
         //Incpect each character for happy and sad
         
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         
         if happyAmount == sadAmount && happyAmount > 1 && sadAmount > 1 {
             
-            resultLabel.text = "Unsure, He is Both?"
+            resultLabel.text = "Unsure, He might be Both?"
             
         } else if happyAmount == 0 && sadAmount == 0 {
             
