@@ -78,19 +78,20 @@ class ViewController: UIViewController {
         //Determining The Happy or Sad
         
         if happyAmount == sadAmount && happyAmount > 1 && sadAmount > 1 {
-            resultLabel.text = "Unsure"
+            
+            resultLabel.text = "Unsure, He is Both?"
             
         } else if happyAmount == 0 && sadAmount == 0 {
             
-            resultLabel.text = "None"
+            resultLabel.text = "Not Happy or Sad??"
             
         } else if happyAmount > sadAmount {
             
-            resultLabel.text = "Happy"
+            resultLabel.text = "Happy, YAY!!"
             
         } else if happyAmount < sadAmount {
             
-            resultLabel.text = "Sad"
+            resultLabel.text = "Sad Oh, :("
             
         }
     }
