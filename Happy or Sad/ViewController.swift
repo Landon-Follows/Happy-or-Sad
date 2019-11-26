@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var theResult: UILabel!
     
 
     override func viewDidLoad() {
@@ -32,9 +32,9 @@ class ViewController: UIViewController {
         
         guard let textFieldAsString = textField.text,
             
-            textFieldAsString != "" else{
+            textFieldAsString != "" else {
                 
-            resultLabel.text = "Please enter text"
+            theResult.text = "Please enter text"
                 
             return
         }
@@ -43,23 +43,23 @@ class ViewController: UIViewController {
         
         if textFieldAsString.count > 255 {
             
-            resultLabel.text = "please enter less characters"
+            theResult.text = "please enter less characters"
             
             return
 
         }
        
-        //make variable happy and sad count, also what the variables are.
+        //Make Happy and Sad Count & Variable Identification
     
         var happyAmount = 0
         
         var sadAmount = 0
         
-        let happyFaces = "😀🙂😄😊:)"
+        let happyFaces = "😀🙂😄😊"
         
-        let sadFaces = "☹️🙁😕😔:("
+        let sadFaces = "☹️🙁😕😔"
         
-        //Incpect each character for happy and sad
+        //Inspect each character for happy and sad
         
         for character in textFieldAsString {
             
@@ -79,20 +79,22 @@ class ViewController: UIViewController {
         
         if happyAmount == sadAmount && happyAmount > 1 && sadAmount > 1 {
             
-            resultLabel.text = "Unsure, He might be Both?"
+            theResult.text = "Unsure, He might be Both?"
             
         } else if happyAmount == 0 && sadAmount == 0 {
             
-            resultLabel.text = "Not Happy or Sad??"
+            theResult.text = "Not Happy or Sad??"
             
         } else if happyAmount > sadAmount {
             
-            resultLabel.text = "Happy, YAY!!"
+            theResult.text = "Happy, YAY!!"
             
         } else if happyAmount < sadAmount {
             
-            resultLabel.text = "Sad Oh, :("
+            theResult.text = "Sad Oh, :("
             
         }
     }
 }
+
+
